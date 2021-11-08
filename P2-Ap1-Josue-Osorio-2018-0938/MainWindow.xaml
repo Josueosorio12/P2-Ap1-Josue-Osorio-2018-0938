@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P2_Ap1_Josue_Osorio_2018_0938"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="210" Width="409">
     <Grid>
+        <StackPanel>
+            <Menu>
+                <MenuItem Header="Registro" Click="MenuItem_Click_1">
+                    <MenuItem Header="Registro De Proyecto" Click="MenuItem_Click"/>
+                </MenuItem>
 
+                <MenuItem Header="Consulta" Click="MenuItem_Click_2">
+                    <MenuItem Header="Consulta" Click="MenuItem_Click_3"/>
+                    <MenuItem Header="Consulta tarea" Click="MenuItem_Click_4"/>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
     </Grid>
 </Window>
