@@ -1,0 +1,28 @@
+﻿<Window x:Class="P2_Ap1_Josue_Osorio_2018_0938.UI.Consultas.CTiposTarea"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:P2_Ap1_Josue_Osorio_2018_0938.UI.Consultas"
+        mc:Ignorable="d"
+        Title="CTiposTarea" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Width="102">
+                <Label Content="Filtrar"/>
+                <ComboBox x:Name="TipoTareaCombobox"  Width="100">
+                    <ComboBoxItem Content="Listado"/>
+
+                </ComboBox>
+                <StackPanel>
+                     <Button x:Name="ButtonBuscar" Content="Buscar" Click="ButtonBuscar_Click">
+                    
+                </Button>
+                </StackPanel>
+               
+            </StackPanel>
+            
+            
+        </StackPanel>
+    </Grid>
+</Window>

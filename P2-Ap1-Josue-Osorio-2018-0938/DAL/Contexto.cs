@@ -10,7 +10,9 @@ namespace P2_Ap1_Josue_Osorio_2018_0938.DAL
 {
     public class Contexto : DbContext
     {
-        public DbSet<TipoTarea> TipoDeTarea { get; set; }
+
+        public DbSet<TipoTarea> TipoTarea { get; set; }
+        public DbSet<Proyectos> Proyectos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
