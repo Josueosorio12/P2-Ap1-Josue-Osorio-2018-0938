@@ -38,9 +38,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DATA\" />
-    <Folder Include="Entidades\" />
     <Folder Include="DAL\" />
+    <Folder Include="DATA\" />
     <Folder Include="UI\Consultas\" />
   </ItemGroup>
 
