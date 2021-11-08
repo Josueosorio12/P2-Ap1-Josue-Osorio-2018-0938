@@ -19,8 +19,16 @@ namespace P2_Ap1_Josue_Osorio_2018_0938.Entidades
         public int Total { get; set; }
 
 
-       /* [ForeignKey("Proyectoid")]
+       [ForeignKey("Proyectoid")]
 
-        public virtual List*/
+        public virtual List<TipoDetalle> TipoDetalle { get; set; }
+
+        public Proyectos()
+        {
+            Proyectoid = 0;
+            Fecha = DateTime.Now;
+            Descripcion = string.Empty;
+            TipoDetalle = new List<TipoDetalle>();
+        }
     }
 }
