@@ -35,14 +35,16 @@ namespace P2_Ap1_Josue_Osorio_2018_0938.BLL
         public static List<TipoTarea> GetTiposTarea()
         {
             List<TipoTarea> lista = new List<TipoTarea>();
+
             Contexto contexto = new Contexto();
+
             try
             {
                 lista = contexto.TipoTarea.ToList();
             }
             catch (Exception)
             {
-                throw;
+               // throw; tengo una exepcion
             }
             finally
             {
