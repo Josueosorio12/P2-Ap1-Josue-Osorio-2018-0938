@@ -1,4 +1,5 @@
-﻿using P2_Ap1_Josue_Osorio_2018_0938.UI.Registros;
+﻿using P2_Ap1_Josue_Osorio_2018_0938.Entidades;
+using P2_Ap1_Josue_Osorio_2018_0938.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,7 +45,7 @@ namespace P2_Ap1_Josue_Osorio_2018_0938
 
         private void MenuItem_Click_3(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void MenuItem_Click_4(object sender, RoutedEventArgs e)

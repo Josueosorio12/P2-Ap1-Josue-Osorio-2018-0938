@@ -14,7 +14,7 @@
                 </MenuItem>
 
                 <MenuItem Header="Consulta" Click="MenuItem_Click_2">
-                    <MenuItem Header="Consulta" Click="MenuItem_Click_3"/>
+                    <MenuItem Header="Consulta Proyectos" Click="MenuItem_Click_3"/>
                     <MenuItem Header="Consulta tarea" Click="MenuItem_Click_4"/>
                 </MenuItem>
             </Menu>
