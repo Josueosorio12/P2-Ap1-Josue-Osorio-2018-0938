@@ -21,10 +21,9 @@
 
                     <Label x:Name="FiltroLabel" Content="Filtro:"/>
                     <ComboBox x:Name="FiltroComboBox" Width="100" Height="25" >
-                        <ComboBoxItem Content="Analisis"/>
-                        <ComboBoxItem Content="Disenos"/>
-                        <ComboBoxItem Content="Programacion"/>
-                        <ComboBoxItem Content="Prueba"/>
+                        <ComboBoxItem Content="Proyectoid"/>
+                        <ComboBoxItem Content="Descripcion"/>
+                        
                     </ComboBox>
 
                 </StackPanel>

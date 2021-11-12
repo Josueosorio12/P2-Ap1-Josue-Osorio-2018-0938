@@ -35,8 +35,8 @@ namespace P2_Ap1_Josue_Osorio_2018_0938.UI.Registros
             TipodeTareaComboBox.SelectedValue = "Tipoid";
             TipodeTareaComboBox.DisplayMemberPath = "TipodeTarea";
 
-
-            Limpiar();
+            TiempoTotalTextBox.Text = "0";
+           
         }
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
@@ -98,26 +98,53 @@ namespace P2_Ap1_Josue_Osorio_2018_0938.UI.Registros
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
-
-            if (!Validar())
-                return;
-
-                bool paso = ProyectoBLL.Guardar(this.proyectos);
+            bool paso = false;
 
             if (proyectos.Proyectoid == 0)
             {
                 paso = ProyectoBLL.Guardar(proyectos);
             }
-
-         
+            else
+            {
+                if (ExisteEnLaBaseDeDatos())
+                {
+                    paso = ProyectoBLL.Guardar(proyectos);
+                }
+                else
+                {
+                    MessageBox.Show("No existe en la base de datos", "Error");
+                }
+            }
 
             if (paso)
             {
                 Limpiar();
-                MessageBox.Show("Transacion Exitosa", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("¡Transacion Exitosa!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
-                MessageBox.Show("Error al guardar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+            {
+                MessageBox.Show("¡Error al guardar!", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            /* if (!Validar())
+                 return;
+
+                 bool paso = ProyectoBLL.Guardar(this.proyectos);
+
+             if (proyectos.Proyectoid == 0)
+             {
+                 paso = ProyectoBLL.Guardar(proyectos);
+             }
+
+
+
+             if (paso)
+             {
+                 Limpiar();
+                 MessageBox.Show("Transacion Exitosa", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+             }
+             else
+                 MessageBox.Show("Error al guardar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);*/
         }
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
@@ -172,6 +199,16 @@ namespace P2_Ap1_Josue_Osorio_2018_0938.UI.Registros
             }
 
             return esValido;
+        }
+        private bool ExisteEnLaBaseDeDatos()
+        {
+            Proyectos esValido = ProyectoBLL.Buscar(proyectos.Proyectoid);
+            return (esValido != null);
+        }
+
+        private void TiempoTotalTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

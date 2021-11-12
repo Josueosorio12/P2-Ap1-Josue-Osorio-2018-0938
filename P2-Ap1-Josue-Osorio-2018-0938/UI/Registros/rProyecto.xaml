@@ -88,7 +88,7 @@
                     <StackPanel Width="438">
                     </StackPanel>
                     <Label Content="Tiempo Total:" Margin="5" RenderTransformOrigin="4.963,-1.245"/>
-                    <TextBox x:Name="TiempoTotalTextBox" Text="{Binding TiempoTotal}" Margin="5" Height="30" Width="137" />
+                    <TextBox x:Name="TiempoTotalTextBox" Text="{Binding Total}" IsReadOnly="True" Margin="5" Height="30" Width="137" TextChanged="TiempoTotalTextBox_TextChanged" />
                 </StackPanel>
             </StackPanel>
 

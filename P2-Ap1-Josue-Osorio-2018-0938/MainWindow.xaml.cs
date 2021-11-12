@@ -1,4 +1,5 @@
 ﻿using P2_Ap1_Josue_Osorio_2018_0938.Entidades;
+using P2_Ap1_Josue_Osorio_2018_0938.UI.Consultas;
 using P2_Ap1_Josue_Osorio_2018_0938.UI.Registros;
 using System;
 using System.Collections.Generic;
@@ -45,12 +46,14 @@ namespace P2_Ap1_Josue_Osorio_2018_0938
 
         private void MenuItem_Click_3(object sender, RoutedEventArgs e)
         {
-           
+            cProyecto proyecto = new cProyecto();
+            proyecto.Show();
         }
 
         private void MenuItem_Click_4(object sender, RoutedEventArgs e)
         {
-
+            cTipoTarea cTipo = new cTipoTarea();
+            cTipo.Show();
         }
     }
 }
